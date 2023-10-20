@@ -1,72 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+
+
+        android:layout_gravity="center">
+
+        <Button
+
+            android:id="@+id/button2"
+            android:layout_width="12sp"
+            android:layout_height="15sp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="start"
+            android:background="@drawable/vector_bar"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:textStyle="bold"
+            app:backgroundTint="#0E0E0E" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="Add Users"
+            android:textColor="#454545"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <!--    </LinearLayout>-->
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:fontFamily="sans-serif"
+        android:text="ID User"
+        android:textColor="#AFABAB"
+        android:textStyle="bold" />
+
     <EditText
-        android:id="@+id/editText1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/edittext"
+        android:hint="ID User"
+        android:paddingStart="10dp" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15"
-        android:text="Nama" />
+        android:fontFamily="sans-serif"
+        android:text="Nama"
+        android:textColor="#AFABAB"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:textSize="15"
-        android:inputType="textPersonName"
-        android:hint="Nama" />
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/edittext"
+        android:hint="Nama"
+        android:paddingStart="10dp" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15"
-        android:text="Password" />
+        android:fontFamily="sans-serif"
+        android:text="Password"
+        android:textColor="#AFABAB"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:textSize="15"
-        android:inputType="textPassword"
-        android:hint="Password"/>
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/edittext"
+        android:hint="Password"
+        android:paddingStart="10dp" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15"
-        android:text="Role" />
-    <Spinner
-        android:id="@+id/plannet_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="15"
-        android:text=""
+        android:hint="Role"
+        android:textColor="#AFABAB"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         />
 
-    <Button
-        android:id="@+id/button2"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:backgroundTint="#4B86B5" />
+        android:textColor="#AFABAB"
+        android:textStyle="bold"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="20dp"
+        >
+
+        <AutoCompleteTextView
+
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:clickable="true"
+            android:drawableRight="@drawable/spinner"
+            android:focusable="false"
+            android:hint="Role"
+            android:inputType="none"
+            android:paddingStart="8dp"
+            android:paddingEnd="10dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="258dp"
+        android:layout_marginBottom="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        >
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/save"
+            android:text="Save"
+            android:textStyle="bold"
+
+            app:backgroundTint="#5279B5"
+
+            />
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:menu="@menu/bottom_navigation_menu"
+
+        />
+
 
 </LinearLayout>
